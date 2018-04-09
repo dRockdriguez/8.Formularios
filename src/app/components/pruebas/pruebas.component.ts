@@ -1,16 +1,18 @@
-import { Component } from '@angular/core';
-import { PruebasComponent } from './components/pruebas/pruebas.component';
+import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+  selector: 'app-pruebas',
+  templateUrl: './pruebas.component.html',
+  styleUrls: ['./pruebas.component.css']
 })
-export class AppComponent {
+export class PruebasComponent implements OnInit {
   value = 0;
   message: string;
 
-  title = 'app works!';
+  constructor() { }
+
+  ngOnInit() {
+  }
 
   increment() {
     if (this.value < 15) {
@@ -28,7 +30,5 @@ export class AppComponent {
       this.message = 'Minimum reached!';
     }
   }
-  changeTitle(){
-    this.title="hola";
-  }
+
 }
